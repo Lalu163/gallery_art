@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Nosifer&display=swap');
+
 *{
     margin: 0;
     padding:0;
@@ -6,4 +8,37 @@
 body{
     width: 100%;
     background-color:#C4EA9E;
+}
+
+.container{
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.enter{
+    margin-top:200px;
+    margin-left: 20vw;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+h1{
+    color:#3A7430;
+    font-size: 75px;
+    font-family: 'Italiana', serif;
+    text-align: center;
+}
+
+button{
+    background-color: #569419;
+    color:white;
+    width:90px;
+    height:50px;
+}
+
+.image{
+    width:900px;
+
 }
