@@ -38,7 +38,16 @@ button{
     height:50px;
 }
 
+a{
+    text-decoration: none;
+    color:white;
+}
+
 .image{
     width:900px;
 
+}
+
+footer{
+    text-align:center;
 }
