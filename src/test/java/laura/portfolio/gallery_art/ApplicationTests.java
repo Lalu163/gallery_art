@@ -32,7 +32,7 @@ public class ApplicationTests {
     @Test
     void returnsTheExistingPictures() throws Exception{
 
-        Picture picture = pictureRepository.save(new Picture("The Pink Fairy","2001"));
+        Picture picture = pictureRepository.save(new Picture("img","The Pink Fairy",2001));
          mockMvc.perform(get("/pictures"))
                  .andExpect(status().isOk())
                  .andExpect(view().name("pictures/all"))
