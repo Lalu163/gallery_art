@@ -49,5 +49,15 @@ a{
 }
 
 footer{
+    position:fixed;
+    bottom:0;
     text-align:center;
+}
+
+/******************* page 2 **************** */
+
+header{
+    height:100%;
+    width:70px;
+    background-color:#569419;
 }
