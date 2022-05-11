@@ -19,7 +19,9 @@ public class SampleDataLoader {
     @PostConstruct
     public void loadSampleData(){
         pictureRepository.saveAll(List.of(
-                new Picture("pinky.jpeg", "The Pinky Fairy", 2021)
+                new Picture("pinky.jpeg", "The Pinky Fairy", 2021),
+                new Picture("arcangel.jpeg", "The Justice", 2021),
+                new Picture("autumm.jpeg", "Autumm", 2022)
         ));
     }
 }

@@ -54,7 +54,11 @@ footer{
     text-align:center;
 }
 
-/******************* page 2 Gallery **************** */
+/******************* Navbar **************** */
+
+.page{
+   margin-left:5vw;
+}
 
 nav{
     height:70px;
@@ -63,7 +67,7 @@ nav{
     color:white;
 }
 
-ul{
+nav,ul{
     display:flex;
 }
 
@@ -73,8 +77,23 @@ ul,li{
     font-size: 20px;
 }
 
+/******************* page 2 Gallery **************** */
+
+.gallery-title{
+    padding:15px;
+}
+
+.picture-list{
+    display:flex;
+    justify-content: space-around;
+}
+
 .picture-container{
-    height:200px;
-    width:200px;
+    height:400px;
+    width:400px;
     background-color:#569419;
+}
+
+h2{
+    color:white;
 }

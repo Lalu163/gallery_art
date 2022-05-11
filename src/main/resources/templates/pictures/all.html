@@ -4,12 +4,16 @@
 </head>
 <body>
 <header th:replace="fragments/header"></header>
-<section class="page">
-    <h1 th:text="${title}"></h1>
-    <div class="picture-container">
-        <p th:text="${pictures}"></p>
-    </div>
-</section>
+<main class="page">
+    <h1 class="gallery-title" th:text="${title}"></h1>
+    <section class="picture-list">
+        <div class="picture-container" th:each="picture: ${pictures}">
+            <h2 class="picture-title"
+                th:text="${picture.title}"></h2>
+
+        </div>
+    </section>
+</main>
 <footer th:replace="fragments/footer"></footer>
 </body>
 </html>
