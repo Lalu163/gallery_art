@@ -22,7 +22,7 @@ public class PictureController {
     @GetMapping("/pictures")
     String listPictures(Model model){
         List<Picture> pictures=(List<Picture>) pictureRepository.findAll();
-        model.addAttribute("title","Picture list");
+        model.addAttribute("title","Gallery");
         model.addAttribute("pictures", pictures);
         return "pictures/all";
     }

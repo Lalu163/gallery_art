@@ -54,10 +54,27 @@ footer{
     text-align:center;
 }
 
-/******************* page 2 **************** */
+/******************* page 2 Gallery **************** */
 
-header{
-    height:100%;
-    width:70px;
+nav{
+    height:70px;
+    width:100%;
+    background-color:#569419;
+    color:white;
+}
+
+ul{
+    display:flex;
+}
+
+ul,li{
+    padding:15px;
+    list-style:none;
+    font-size: 20px;
+}
+
+.picture-container{
+    height:200px;
+    width:200px;
     background-color:#569419;
 }
