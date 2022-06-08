@@ -10,7 +10,7 @@
         <div class="picture-container" th:each="picture: ${pictures}">
             <h2 class="picture-title"
                 th:text="${picture.title}"></h2>
-
+            <img class="digital-art" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}">
         </div>
     </section>
 </main>

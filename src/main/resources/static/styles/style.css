@@ -89,11 +89,19 @@ ul,li{
 }
 
 .picture-container{
-    height:400px;
+    height:450px;
     width:400px;
     background-color:#569419;
 }
 
 h2{
     color:white;
+    padding: 5px;
+    align-items: center;
+}
+
+.digital-art{
+    height: 350px;
+    width: 350px;
+    padding: 30px;
 }
