@@ -21,7 +21,9 @@ public class SampleDataLoader {
         pictureRepository.saveAll(List.of(
                 new Picture("pinky.jpeg", "The Pinky Fairy", 2021),
                 new Picture("arcangel.jpeg", "The Justice", 2021),
-                new Picture("autumm.jpeg", "Autumm", 2022)
+                new Picture("autumm.jpeg", "Autumm", 2022),
+                new Picture("leaf-fairy.jpeg", "The Fairy Of The Leaf", 2022),
+                new Picture("alive.jpeg", "Alive", 2021)
         ));
     }
 }
