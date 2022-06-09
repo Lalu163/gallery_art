@@ -8,9 +8,13 @@
     <h1 class="gallery-title" th:text="${title}"></h1>
     <section class="picture-list">
         <div class="picture-container" th:each="picture: ${pictures}">
-            <h2 class="picture-title"
-                th:text="${picture.title}"></h2>
+            <div class="title-container">
+                <img class="ribbon" th:src="@{/assets/green-ribbon.png}">
+                <h2 class="picture-title"
+                    th:text="${picture.title}"></h2></img>
+            </div>
             <img class="digital-art" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}">
+            <img class="picture-frame" th:src="@{/assets/white-frame-vector.png}">
         </div>
     </section>
 </main>
