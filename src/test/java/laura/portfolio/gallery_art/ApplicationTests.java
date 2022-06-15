@@ -38,4 +38,11 @@ public class ApplicationTests {
                  .andExpect(view().name("pictures/all"))
                  .andExpect(model().attribute("pictures", hasItem(picture)));
     }
+
+    @Test
+    void loadsTheWhoIAmPage() throws Exception {
+        mockMvc.perform(get("/who-i-am"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("who-i-am"));
+    }
 }

@@ -77,6 +77,10 @@ ul,li{
     font-size: 20px;
 }
 
+li:hover{
+    background-color: #69B61C;
+}
+
 /******************* page 2 Gallery **************** */
 
 .gallery-title{
