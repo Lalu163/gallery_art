@@ -139,6 +139,24 @@ h2{
     margin-top: 34px;
 }
 
+.add{
+    height: 70px;
+    margin-left: 50%;
+}
+
+/******************* add page **************** */
+.add-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    background-color:#76BC31;
+    height: 700px;
+    width: 600px;
+    margin-left: 31%;
+}
+
 /**************** who i am page ****************** */
 
 .contact-container{

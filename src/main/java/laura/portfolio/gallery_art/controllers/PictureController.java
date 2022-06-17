@@ -26,4 +26,9 @@ public class PictureController {
         model.addAttribute("pictures", pictures);
         return "pictures/all";
     }
+
+    @GetMapping("pictures/new")
+    String getForm(Model model){
+        return"pictures/new";
+    }
 }
