@@ -135,6 +135,34 @@ h2{
     margin-top: 34px;
 }
 
+/**************** who i am page ****************** */
+
+.contact-container{
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    margin-left:300px;
+}
+
+.contact-title{
+    margin-bottom: 50px;
+}
+
+.bio-container{
+    background-color: #76BC31;
+    height: 600px;
+    width: 600px;
+}
+
+p{
+    color:white;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.me{
+    height: 450px;
+}
+
 
 /************************** footer ****************** */
 

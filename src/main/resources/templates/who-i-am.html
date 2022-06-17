@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:replace="fragments/head">
 </head>
 <body>
 <header th:replace="fragments/header"></header>
+<h1 class="contact-title">Who I Am</h1>
+<section class="contact-container">
+    <div class="bio-container">
+        <p>I'm Laura Contreras, junior fullstack programmer, I live in a place with a lovely name, La Font del Bosc, this place has inspired me to draw fairies.<br><br>
 
+            I am currently looking for a job where I can get started in the world of programming. In the meantime I'm doing small projects on my own as a portfolio and in my free time I dedicate my time to hobbies like digital art and music production.<br><br>
+
+            I'm a restless mind who loves to combine art with technology and I'm eager to learn and keep growing.</p>
+    </div>
+    <div class="image-container">
+        <img class="me" th:src="@{/assets/Laura.jpg}">
+    </div>
+</section>
+<footer th:replace="fragments/footer"></footer>
 </body>
 </html>
