@@ -77,6 +77,10 @@ ul,li{
     font-size: 20px;
 }
 
+.home:hover{
+    background-color: #69B61C;
+}
+
 li:hover{
     background-color: #69B61C;
 }

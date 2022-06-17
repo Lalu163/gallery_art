@@ -40,6 +40,13 @@ public class ApplicationTests {
     }
 
     @Test
+    void returnsAFormToAddNewPicture() throws Exception{
+        mockMvc.perform(get("/pictures/new"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/pictures/new"));
+    }
+
+    @Test
     void loadsTheWhoIAmPage() throws Exception {
         mockMvc.perform(get("/who-i-am"))
                 .andExpect(status().isOk())
