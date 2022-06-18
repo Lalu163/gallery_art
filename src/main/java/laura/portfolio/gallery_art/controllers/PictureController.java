@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -29,6 +31,16 @@ public class PictureController {
 
     @GetMapping("pictures/new")
     String getForm(Model model){
+        Picture picture = new Picture();
+        model.addAttribute("title", "Add a new picture");
+        model.addAttribute("picture", picture);
         return"pictures/new";
     }
+
+    @PostMapping("/pictures/new")
+    String addPicture(@ModelAttribute Picture picture) {
+        pictureRepository.save(picture);
+        return "redirect:/pictures";
+    }
+
 }

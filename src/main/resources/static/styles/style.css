@@ -150,7 +150,7 @@ h2{
     flex-direction: column;
 }
 
-.form{
+form{
     background-color:#76BC31;
     height: 700px;
     width: 600px;
