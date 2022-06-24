@@ -12,13 +12,13 @@ public class Picture implements Serializable {
     private Long id;
     private String img;
     private String title;
-    private int year;
+    private String year;
 
     public Picture(){
 
     }
 
-    public Picture(String img, String title, int year){
+    public Picture(String img, String title, String year){
         this.img=img;
         this.title=title;
         this.year=year;
@@ -48,11 +48,11 @@ public class Picture implements Serializable {
         this.title=title;
     }
 
-    public int getYear(){
+    public String getYear(){
         return year;
     }
 
-    public void setYear(int year){
+    public void setYear(String year){
         this.year=year;
     }
 

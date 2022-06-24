@@ -15,9 +15,10 @@
             </div>
             <img class="digital-art" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}">
             <img class="picture-frame" th:src="@{/assets/white-frame-vector.png}">
+            <a class="button" th:href="'/pictures/edit/'+${picture.id}">Edit</a>
         </div>
     </section>
-    <a href="/pictures/new"><img class="add" th:src="@{/assets/plus.png}"></a>
+    <a type="button" href="/pictures/new"><img class="add" th:src="@{/assets/plus.png}"></a>
 </main>
 <footer th:replace="fragments/footer"></footer>
 </body>

@@ -36,7 +36,7 @@ public class ApplicationTests {
     @Test
     void returnsTheExistingPictures() throws Exception {
 
-        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", 2001));
+        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", "2021"));
         mockMvc.perform(get("/pictures"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("pictures/all"))
@@ -55,23 +55,24 @@ public class ApplicationTests {
     @Test
     void allowsToCreateANewPicture() throws Exception {
         mockMvc.perform(post("/pictures/new")
-                .param("title", "The Futuristic Fairy")
-                .param("year", "2021")
-    )
-        .andExpect(status().is3xxRedirection())
+                        .param("img", "pinky.jpeg")
+                        .param("title", "The Pinky Fairy")
+                        .param("year", "2021")
+                )
+                .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/pictures"));
 
         List<Picture> existingPictures = (List<Picture>) pictureRepository.findAll();
         assertThat(existingPictures, contains(allOf(
                 hasProperty("img", equalTo("pinky.jpeg")),
                 hasProperty("title", equalTo("The Pinky Fairy")),
-                hasProperty("year"), equalTo(2021)
+                hasProperty("year", equalTo("2021"))
         )));
     }
 
     @Test
     void returnsAFormToEditPictures() throws Exception {
-        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", 2021));
+        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", "2021"));
         mockMvc.perform(get("/pictures/edit/" + picture.getId()))
                 .andExpect(status().isOk())
                 .andExpect(view().name("pictures/edit"))
