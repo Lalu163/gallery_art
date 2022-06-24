@@ -36,7 +36,7 @@ public class ApplicationTests {
     @Test
     void returnsTheExistingPictures() throws Exception {
 
-        Picture picture = pictureRepository.save(new Picture("img", "The Pink Fairy", 2001));
+        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", 2001));
         mockMvc.perform(get("/pictures"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("pictures/all"))
@@ -47,7 +47,9 @@ public class ApplicationTests {
     void returnsAFormToAddNewPicture() throws Exception {
         mockMvc.perform(get("/pictures/new"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("/pictures/new"));
+                .andExpect(view().name("pictures/edit"))
+                .andExpect(model().attributeExists("picture"))
+                .andExpect(model().attribute("title", "Add a new picture"));
     }
 
     @Test
@@ -61,9 +63,20 @@ public class ApplicationTests {
 
         List<Picture> existingPictures = (List<Picture>) pictureRepository.findAll();
         assertThat(existingPictures, contains(allOf(
-                hasProperty("title", equalTo("The Futuristic Fairy")),
+                hasProperty("img", equalTo("pinky.jpeg")),
+                hasProperty("title", equalTo("The Pinky Fairy")),
                 hasProperty("year"), equalTo(2021)
         )));
+    }
+
+    @Test
+    void returnsAFormToEditPictures() throws Exception {
+        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", 2021));
+        mockMvc.perform(get("/pictures/edit/" + picture.getId()))
+                .andExpect(status().isOk())
+                .andExpect(view().name("pictures/edit"))
+                .andExpect(model().attribute("picture", picture))
+                .andExpect(model().attribute("title", "Edit picture"));
     }
 
     @Test

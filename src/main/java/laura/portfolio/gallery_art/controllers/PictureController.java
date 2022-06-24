@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -30,11 +31,19 @@ public class PictureController {
     }
 
     @GetMapping("pictures/new")
-    String getForm(Model model){
+    String newPicture(Model model){
         Picture picture = new Picture();
         model.addAttribute("title", "Add a new picture");
         model.addAttribute("picture", picture);
-        return"pictures/new";
+        return "pictures/edit";
+    }
+
+    @GetMapping("pictures/edit/{id}")
+    String editPicture(Model model, @PathVariable Long id){
+        Picture picture = pictureRepository.findById(id).get();
+        model.addAttribute("picture", picture);
+        model.addAttribute("title", "Edit picture");
+        return "pictures/edit";
     }
 
     @PostMapping("/pictures/new")
