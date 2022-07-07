@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -85,5 +86,15 @@ public class ApplicationTests {
         mockMvc.perform(get("/who-i-am"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("who-i-am"));
+    }
+
+    @Test
+    void allowsToDeleteAPicture()throws Exception{
+        Picture picture = pictureRepository.save(new Picture("pinky.jpeg", "The Pinky Fairy", "2021"));
+        mockMvc.perform(get("/pictures/delete/" + picture.getId()))
+                .andExpect(status().is3xxRedirection())
+                .andExpect(redirectedUrl("/pictures"));
+
+        assertThat(pictureRepository.findById(picture.getId())), equalTo(Optional.empty());
     }
 }
