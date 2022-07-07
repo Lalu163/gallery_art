@@ -143,19 +143,42 @@ h2{
     position: relative;
     z-index: 1;
 }
-.button{
+.button-edit{
     position: absolute;
     z-index: 2;
-    top: 280px;
+    top: 300px;
     display: none;
-    left: 70px;
-    background-color: #569419;
-    height: 50px;
-    width: 70px;
+    left: 80px;
+    background-color: transparent;
+    border: 4px solid #76BC31;
+    padding: 10px 24px;
 }
-.picture-container:hover .button{
+
+.button-delete{
+    position: absolute;
+    z-index: 2;
+    top: 300px;
+    display: none;
+    left: 160px;
+    background-color: transparent;
+    border: 4px solid #76BC31;
+    padding: 10px 24px;
+}
+
+.picture-container:hover .button-edit{
     display:block;
+
 }
+
+.picture-container:hover{
+    transform: translateY(-15px);
+    transition: 0.5s
+}
+
+.picture-container:hover :not(.button-edit){
+    filter: blur(1px) brightness(70%);
+}
+
 
 .add{
     height: 70px;
