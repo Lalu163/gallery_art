@@ -52,4 +52,11 @@ public class PictureController {
         return "redirect:/pictures";
     }
 
+    @GetMapping("/delete/{id}")
+    String removePicture(@PathVariable Long id){
+        pictureRepository.findById(id);
+        pictureRepository.deleteById(id);
+        return "redirect:/pictures";
+    }
+
 }
