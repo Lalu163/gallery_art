@@ -95,6 +95,6 @@ public class ApplicationTests {
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/pictures"));
 
-        assertThat(pictureRepository.findById(picture.getId())), equalTo(Optional.empty());
+        assertThat(pictureRepository.findById(picture.getId()), equalTo(Optional.empty()));
     }
 }
