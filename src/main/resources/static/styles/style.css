@@ -191,7 +191,7 @@ h2{
 
 
 
-/******************* add page **************** */
+/******************* add/edit page **************** */
 .add-page{
     display: flex;
     flex-direction: column;
@@ -199,9 +199,15 @@ h2{
 
 form{
     background-color:#76BC31;
-    height: 700px;
+    height: 600px;
     width: 600px;
     margin-left: 31%;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.input-form{
+    padding: 7px 70px;
 }
 
 /**************** who i am page ****************** */
