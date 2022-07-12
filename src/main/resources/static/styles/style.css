@@ -148,7 +148,7 @@ h2{
     z-index: 2;
     top: 300px;
     display: none;
-    left: 80px;
+    left: 100px;
     background-color: transparent;
     border: 4px solid #76BC31;
     padding: 10px 24px;
@@ -159,13 +159,18 @@ h2{
     z-index: 2;
     top: 300px;
     display: none;
-    left: 160px;
+    left: 210px;
     background-color: transparent;
     border: 4px solid #76BC31;
-    padding: 10px 24px;
+    padding: 10px 20px;
 }
 
 .picture-container:hover .button-edit{
+    display:block;
+
+}
+
+.picture-container:hover .button-delete{
     display:block;
 
 }
@@ -175,10 +180,9 @@ h2{
     transition: 0.5s
 }
 
-.picture-container:hover :not(.button-edit){
+.digital-art:hover :not(.button-edit) :not(button-delete){
     filter: blur(1px) brightness(70%);
 }
-
 
 .add{
     height: 70px;
