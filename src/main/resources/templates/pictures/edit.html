@@ -6,26 +6,30 @@
 <section class="add-page">
     <h1 class="title" th:text="${title}"></h1>
     <form th:action="@{/pictures/new}" th:object="${picture}" method="post">
-        <div class="form-group">
-            <input type="hidden" th:field="*{id}">
-            <label class="col-md2" for="title">Title</label>
-            <input th:field="*{title}" type="text" class="input-form" id="title"
-                   placeholder="Enter title">
-        </div>
+        <div class="form-content">
+            <div class="form-group">
+                <input type="hidden" th:field="*{id}">
+                <label class="col-md2" for="title">Title</label>
+                <input th:field="*{title}" type="text" class="input-form" id="title"
+                       placeholder="Enter title">
+            </div>
 
-        <div class="form-group">
-            <label class="col-md2" for="image">Image</label>
-            <input th:field="*{img}"  class="input-form" id="image" type="file" name="image" accept="image/png, image/jpeg"
-                   placeholder="Enter image">
-        </div>
+            <div class="form-group">
+                <label class="col-md2" for="image">Image</label>
+                <div><img class="art-edit" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}"></div>
+                <input th:field="*{img}" class="input-form" id="image" type="file" name="image"
+                       accept="image/png, image/jpeg"
+                       placeholder="Enter image">
+            </div>
 
-        <div class="form-group">
-            <label class="col-md2" for="year">Year</label>
-            <input th:field="*{year}" type="text" class="input-form" id="year"
-                   placeholder="Enter year">
-        </div>
-        <div class="card-footer ">
-            <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
+            <div class="form-group">
+                <label class="col-md2" for="year">Year</label>
+                <input th:field="*{year}" type="text" class="input-form" id="year"
+                       placeholder="Enter year">
+            </div>
+            <div class="card-footer ">
+                <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
+            </div>
         </div>
     </form>
 </section>
