@@ -9,6 +9,7 @@ This project runs in local host:8080. The view of this page, at the moment, is f
 - Java ☕
 - HTML
 - CSS
+- Thymeleaf
 
 ToDo (work in process)
 
