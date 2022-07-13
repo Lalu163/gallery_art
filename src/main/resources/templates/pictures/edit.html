@@ -16,7 +16,6 @@
 
             <div class="form-group">
                 <label class="col-md2" for="image">Image</label>
-                <div><img class="art-edit" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}"></div>
                 <input th:field="*{img}" class="input-form" id="image" type="file" name="image"
                        accept="image/png, image/jpeg"
                        placeholder="Enter image">
