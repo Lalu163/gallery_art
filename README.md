@@ -9,3 +9,9 @@ This project runs with Spring Boot. This project is a art gallery where I've com
 - Java ☕
 - HTML
 - CSS
+
+ToDo (work in process)
+
+- Fix the edit page
+- Responsive design
+
