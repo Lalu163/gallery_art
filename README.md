@@ -13,6 +13,5 @@ This project runs in local host:8080. The view of this page, at the moment, is f
 
 ToDo (work in process)
 
-- Fix the edit page
 - Responsive design
 
