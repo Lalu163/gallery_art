@@ -14,10 +14,12 @@
                        placeholder="Enter title">
             </div>
 
-            <div class="form-group">
+            <div class="form-group" th:switch="${picture.img}">
                 <label class="col-md2" for="image">Image</label>
-                <input th:field="*{img}" class="input-form" id="image" type="file" name="image"
+                <input th:if="${picture.img} == null" th:field="*{img}" class="input-form" id="image" type="file" name="image"
                        accept="image/png, image/jpeg"
+                       placeholder="Enter image">
+                <input th:if="${picture.img} != null" th:field="*{img}" class="input-form" id="image-url" type="text" name="image"
                        placeholder="Enter image">
             </div>
 
