@@ -199,7 +199,8 @@ h2{
 
 form{
     background-color:#76BC31;
-    height: 600px;
+    border-radius: 10px;
+    height: 400px;
     width: 600px;
     font-size: 20px;
     color: white;
@@ -221,6 +222,15 @@ form{
     padding: 5px 70px;
     color: #69B61C;
     margin-left: 75px;
+}
+
+.save-button{
+    padding: 10px 20px;
+    background-color: #C4EA9E;
+    color:#3A7430;
+    margin-left: 250px;
+    margin-top: 30px;
+    border: 0;
 }
 
 /**************** who i am page ****************** */
