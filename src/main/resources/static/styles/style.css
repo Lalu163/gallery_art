@@ -66,10 +66,15 @@ nav,ul{
     display:flex;
 }
 
-ul,li{
-    padding:15px;
+ul{
     list-style:none;
     font-size: 20px;
+    height:70px;
+}
+
+li{
+    padding: 20px;
+    height:29px;
 }
 
 .home:hover{
