@@ -4,23 +4,32 @@
 </head>
 <body>
 <header th:replace="fragments/header"></header>
-<main class="page">
-    <h1 class="gallery-title" th:text="${title}"></h1>
-    <section class="picture-list">
-        <div class="picture-container" th:each="picture: ${pictures}">
-            <div class="title-container">
-                <img class="ribbon" th:src="@{/assets/green-ribbon.png}">
-                <h2 class="picture-title"
-                    th:text="${picture.title}"></h2></img>
-            </div>
-            <img class="digital-art" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}">
-            <img class="picture-frame" th:src="@{/assets/white-frame-vector.png}">
-            <a class="button-edit" th:href="'/pictures/edit/'+${picture.id}">Edit</a>
-            <a class="button-delete" th:href="'/delete/'+${picture.id}">Delete</a>
-        </div>
-    </section>
-    <a type="button" href="/pictures/new"><img class="add" th:src="@{/assets/plus.png}"></a>
-</main>
+    <main class="page">
+        <h1 class="gallery-title" th:text="${title}"></h1>
+            <section class="picture-list">
+                <div class="picture-container" th:each="picture: ${pictures}">
+
+                    <div class="title-container">
+
+                        <img class="ribbon" th:src="@{/assets/green-ribbon.png}">
+                        <h2 class="picture-title"
+                            th:text="${picture.title}"></h2></img>
+
+                    </div>
+
+                    <div class="info-container">
+
+                        <img class="digital-art" th:src="@{'/assets/'+${picture.img}}" alt="picture" th:attr="alt=${picture.title}">
+                        <img class="picture-frame" th:src="@{/assets/white-frame-vector.png}">
+                        <a class="button-edit" th:href="'/pictures/edit/'+${picture.id}">Edit</a>
+                        <a class="button-delete" th:href="'/delete/'+${picture.id}">Delete</a>
+
+                    </div>
+
+                </div>
+            </section>
+        <a type="button" href="/pictures/new"><img class="add" th:src="@{/assets/plus.png}"></a>
+    </main>
 <footer th:replace="fragments/footer"></footer>
 </body>
 </html>
