@@ -243,7 +243,7 @@ form{
 .contact-container{
     display: grid;
     grid-template-columns: repeat(2, 0.5fr);
-    margin-left:300px;
+    margin-left:200px;
     margin-bottom:50px;
 }
 
@@ -259,13 +259,15 @@ form{
 
 p{
     color:white;
-    font-size: 30px;
+    font-size: 28px;
     text-align: justify;
+    margin: 20px;
 }
 
 .me{
     height: 450px;
     margin-top: 50px;
+    border-radius: 50%;
 }
 
 
