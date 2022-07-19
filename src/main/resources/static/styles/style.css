@@ -77,6 +77,11 @@ li{
     height:29px;
 }
 
+.home{
+    height: 59px;
+    padding: 5px;
+}
+
 .home:hover{
     background-color: #69B61C;
 }
